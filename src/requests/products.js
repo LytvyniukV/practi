@@ -23,5 +23,13 @@ const create = async (object) => {
         
     } catch (error) { console.log(error) }
 }
+const deleteById = async (id) => {
+    try {
+        const response = await apiInstance.delete(`/products/${id}`)
+         return response
+    } catch (error) {
+        alert('ERROR')
+    }
 
-export const productsApi = {getAll, getById, create}
+}
+export const productsApi = {getAll, getById, create, deleteById}

@@ -3,5 +3,6 @@ export const refs = {
     form: document.querySelector('#singleProductForm'),
     singleProduct: document.querySelector('#singleProduct'),
     createProductForm: document.querySelector('#create-product-form'),
-    newProductContainer: document.querySelector('#newProductSection')
+    newProductContainer: document.querySelector('#newProductSection'),
+    deletionProductForm: document.querySelector('#deletionProductForm')
 }
