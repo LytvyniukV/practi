@@ -15,4 +15,13 @@ const getById = async (id) => {
         
     } catch (error) { console.log(error) }
 }
-export const productsApi = {getAll, getById}
+
+const create = async (object) => {
+    try {
+        const response = await apiInstance.post(`/products/add`, object);
+        return response.data;
+        
+    } catch (error) { console.log(error) }
+}
+
+export const productsApi = {getAll, getById, create}
