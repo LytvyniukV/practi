@@ -1,0 +1,6 @@
+import{a as l}from"./assets/vendor-a2e8d7fa.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const c of t.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&n(c)}).observe(document,{childList:!0,subtree:!0});function s(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function n(e){if(e.ep)return;e.ep=!0;const t=s(e);fetch(e.href,t)}})();const i=l.create({baseURL:"https://dummyjson.com"}),a=async()=>{try{return(await i.get("/products")).data}catch(r){console.log(r)}},u={getAll:a},d=({products:r})=>r.reduce((o,{title:s,description:n,price:e})=>o+`<li>
+        <h3>${s}</h3>
+        <p>${n}</p>
+        <p>${e}</p>
+        </li>`,""),f={allProducts:document.querySelector("#allProducts")},p=async()=>{const r=await u.getAll();f.allProducts.insertAdjacentHTML("afterbegin",d(r)),console.log(r)};p();
+//# sourceMappingURL=commonHelpers.js.map
