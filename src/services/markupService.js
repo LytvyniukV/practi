@@ -8,3 +8,8 @@ export const createAllProductsMarkup = ({products}) =>{
         </li>`
     , '')
 }
+export const createOneProductMarkup = ({title, description, price}) => {
+    return ` <h3>${title}</h3>
+        <p>${description}</p>
+        <p>${price}</p>`
+}

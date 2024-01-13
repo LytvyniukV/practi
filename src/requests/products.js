@@ -8,4 +8,11 @@ const getAll = async () => {
   
 };
 
-export const productsApi = {getAll}
+const getById = async (id) => {
+    try {
+        const response = await apiInstance.get(`/products/${id}`);
+        return response.data;
+        
+    } catch (error) { console.log(error) }
+}
+export const productsApi = {getAll, getById}
